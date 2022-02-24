@@ -3,10 +3,10 @@ const router = express.Router()
 
 const CountryModel = require('../models/Country')
 
-// router.get('/', async (request, response) => {
-//     const countries = await CountryModel.find();
-//     response.status(200).json(countries);
-// });
+router.get('/', async (request, response) => {
+    const countries = await CountryModel.find();
+    response.status(200).json(countries);
+});
 
 router.get('/:id', async (request, response) => {
     const countryId = request.params.id;
