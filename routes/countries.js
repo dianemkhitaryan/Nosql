@@ -58,7 +58,7 @@ router.put('/:id', async (request, response) => {
 // Question 1
 router.get('/start/:name', async (req, res) =>{
     const name = req.params.name;
-    const country = await CountryModel.find({"name": {$regex: '^' + name, $options: "i"}})
+    const country = await CountryModel.find({"name": {$regex: name, $options: "i"}})
     res.status(200).json(country)
 })
 
