@@ -62,6 +62,7 @@ router.get('/start/:name', async (req, res) =>{
     res.status(200).json(country)
 })
 
+
 // Question 6
 router.get('/', async (request, response) => {
     const countries = await CountryModel.find().sort( { population: 1 } )
